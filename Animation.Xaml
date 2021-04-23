@@ -1,0 +1,61 @@
+﻿<Window x:Class="WpfApp8.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp8"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <Style x:Key="key" TargetType="Button">
+            <Style.Setters>
+                <Setter Property="Button.Opacity" Value="50"></Setter>
+            </Style.Setters>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <TabControl>
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Ellipse Height="10" Width="10" Fill="Black"></Ellipse>
+                        <TextBlock Margin="3" Text="Movavi Screen Capture Studio"></TextBlock>
+                    </StackPanel>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <StackPanel>
+                        <Button x:Name="btnAnimation" Style="{StaticResource key}" Width="50" Height="50" Click="Button_Click">Download for Free</Button>
+                        <Button Style="{StaticResource key}" Width="50" Height="50">Download for Free</Button>
+                        <StackPanel>
+                            <TextBlock>
+                                <Hyperlink Name="HyperLink" TextDecorations="None"
+                                           MouseEnter="OnMouseEnter"
+                                           MouseLeave="OnMouseLeave">
+                                    More about the Windows version
+                                </Hyperlink>
+                                <Hyperlink Name="myHyperLink" TextDecorations="None"
+                                           MouseEnter="OnMouseEnter"
+                                           MouseLeave="OnMouseLeave">
+                                    More about the Mac versions
+                                </Hyperlink>
+                            </TextBlock>
+                        </StackPanel>
+                    </StackPanel>
+                </TabItem.Content>
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Height="10" Width="10" Fill="Black"></Rectangle>
+                        <TextBlock Margin="3" Text="See Other Useful How-to Guides"></TextBlock>
+                    </StackPanel>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <Grid>
+                        
+                    </Grid>
+                </TabItem.Content>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
